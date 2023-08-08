@@ -1,13 +1,34 @@
-#include <stdio.h>
-
-size_t	ft_strlcpy(char * dest, const char *src; size_t size)
+size_t	ft_strlcpy(char * dst, const char *src, size_t dstsize)
 {
+	size_t	len;
 
+	len = 0;
+	if (dstsize > 0)
+	{
+		while (src[len] != '\0')
+		{
+			if (len == dstsize)
+			{
+				len--;
+				break;
+			}
+			dst[len] = src[len];
+		 	len++;
+		}
+	}
+	dst[len] = '\0';
+	while (src[len] != '\0')
+		len++;
+	return (len);
 }
+/*
+#include <stdio.h>
+#include <string.h>
 
 int	main(void)
 {
-	int src[] = "Hello friend";
-	int dest[50] = "";
-	printf("%d\n", ft_strlcpy(dest, src, sizeof(dest));
-}
+	char src[] = "Hello friend";
+	char dest[5];
+	printf("%zu\n", ft_strlcpy(dest, src, sizeof(dest)));
+	printf("%zu\n", strlcpy(dest, src, sizeof(dest)));
+}*/
