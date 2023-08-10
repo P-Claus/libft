@@ -9,3 +9,4 @@ In this introductory project, I am excited to create my own personal static libr
 ## Included Functions
 * ft_strlen
 * ft_strlcpy
+* ft_atoi
