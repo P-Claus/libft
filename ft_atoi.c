@@ -14,7 +14,7 @@ int	ft_atoi(const char *str)
 		sign = -1;
 		iter++;
 	}
-	if (str[iter] == 43)
+	else if (str[iter] == 43)
 		iter++;
 	while (str[iter] != '\0' && str[iter] >= 48 && str[iter] <= 58)
 	{
