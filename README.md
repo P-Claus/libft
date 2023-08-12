@@ -10,3 +10,5 @@ In this introductory project, I am excited to create my own personal static libr
 * ft_strlen
 * ft_strlcpy
 * ft_atoi
+* ft_isalpha
+* ft_isdigit
