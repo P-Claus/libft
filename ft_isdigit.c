@@ -5,13 +5,3 @@ int	ft_isdigit(int	c)
 	else
 		return (0);
 }
-/*
-#include <stdio.h>
-#include <ctype.h>
-
-int	main(void)
-{
-	int	digit = '/';
-	printf("%d\n", isdigit(digit));
-	printf("%d\n", ft_isdigit(digit));
-}*/
