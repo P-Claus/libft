@@ -12,3 +12,5 @@ In this introductory project, I am excited to create my own personal static libr
 * ft_atoi
 * ft_isalpha
 * ft_isdigit
+* ft_isascii
+* ft_isprint
