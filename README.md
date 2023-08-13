@@ -14,3 +14,5 @@ In this introductory project, I am excited to create my own personal static libr
 * ft_isdigit
 * ft_isascii
 * ft_isprint
+* ft_toupper
+* ft_tolower
