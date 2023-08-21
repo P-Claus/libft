@@ -11,7 +11,7 @@ int	ft_isprint(int c)
 
 int	main(void)
 {
-	int	c = 45;
+	int	c = 46;
 
 	printf("%d\n", isprint(c));
 	printf("%d\n", ft_isprint(c));
