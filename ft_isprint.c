@@ -5,3 +5,16 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
+
+#include <stdio.h>
+#include <ctype.h>
+
+int	main(void)
+{
+	int	c = 45;
+
+	printf("%d\n", isprint(c));
+	printf("%d\n", ft_isprint(c));
+	
+	return (0);
+}
