@@ -5,3 +5,16 @@ int	ft_isascii(int	c)
 	else
 		return (0);
 }
+
+#include <stdio.h>
+#include <ctype.h>
+
+int	main(void)
+{
+	int	c = 130;
+
+	printf("isascii: %d\n", isascii(c));
+	printf("ft_isascii: %d\n", ft_isascii(c));
+	
+	return (0);
+}
