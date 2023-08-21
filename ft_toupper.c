@@ -17,11 +17,9 @@ int main()
 {
     srand(time(NULL));
     char    c;
-
     for (int loop = 0; loop <= NUM_STRINGS; ++loop)
     {
-        c = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvw,?;.:/=$"[random () % 60];
-    
+        c = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvw,?;.:/=$"[rand() % 60];
         printf("-------------------------------------------------\n");
         printf("RANDOM CHARACTER %d: %d\n", loop + 1, c);    
         printf("ft_toupper: %d\n", ft_toupper(c));
