@@ -36,7 +36,8 @@ int main()
         randomString[stringLength] = '\0';
         printf("-------------------------------------------------\n");
         printf("RANDOM STRING %d: %s\n", loop + 1, randomString);
-        printf("The length of the random string is: %zu\n", ft_strlen(randomString));
+        printf("ft_strlen: %zu\n", ft_strlen(randomString));
+        printf("strlen: %zu\n", strlen(randomString);
         printf("-------------------------------------------------\n");
         printf("\n\n\n\n\n");
     }
