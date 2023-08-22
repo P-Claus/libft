@@ -17,3 +17,4 @@ The project is called libft and is an exercise that requires you to use many thi
 * ft_isprint
 * ft_toupper
 * ft_tolower
+* ft_memset
