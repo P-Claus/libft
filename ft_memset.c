@@ -34,11 +34,13 @@ void    *ft_memset(void *s, int c, size_t n)
 
 int main(void)
 {
-    char src[21] = "gdfhjgazGHJGgdhsqjjG";
-    printf("Before the function: %s\n", src);
+    char src1[21] = "gdfhjgazGHJGgdhsqjjG";
+    char src2[21] = "gdfhjgazGHJGgdhsqjjG";
+    printf("Before the function (1): %s\n", src1);
+    printf("Before the function (2): %s\n", src2);
     printf("-------------------------------------------------\n");
-    memset(src + 5, 43, 3*sizeof(char));
-    printf("memset: %s\n", src);
-    ft_memset(src + 5, '+', 3*sizeof(char));
-    printf("ft_memset: %s\n", src);
+    memset(src1 + 5, 43, 3*sizeof(char));
+    printf("memset: %s\n", src1);
+    ft_memset(src2 + 5, '+', 3*sizeof(char));
+    printf("ft_memset: %s\n", src2);
 }
