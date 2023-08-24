@@ -13,8 +13,8 @@ void    ft_bzero(void *s, size_t n)
 #include<string.h>
 int main(void)
 {
-    char src1[21] = "567:;2`$dfhjgazGHJGgdhsqjjG";
-    char src2[21] = "567:;2`$dfhjgazGHJGgdhsqjjG";
+    char src1[30] = "567:;2`$dfhjgazGHJGgdhsqjjG";
+    char src2[30] = "567:;2`$dfhjgazGHJGgdhsqjjG";
     printf("Before the function: %s\n", src1);
     printf("-------------------------------------------------\n");
     bzero(src1 + 7, 5);
