@@ -9,6 +9,7 @@ The project is called libft and is an exercise that requires you to use many thi
 
 ## Included Functions
 * ft_strlen
+  This is a primary function that calculates the length of a string, excluding the null-terminator.
 * ft_strlcpy
 * ft_atoi
 * ft_isalpha
