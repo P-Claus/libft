@@ -8,8 +8,7 @@ In this introductory project, I am excited to create my own personal static libr
 The project is called libft and is an exercise that requires you to use many things learnt during the piscine. Most of the functions in this project were written during the piscine (in one form or another).
 
 ## Included Functions
-* ft_strlen<br>
-  This is a primary function that calculates the length of a string, excluding the null-terminator.<br>
+* ft_strlen
 * ft_strlcpy
 * ft_atoi
 * ft_isalpha
