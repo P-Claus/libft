@@ -13,8 +13,8 @@ int	ft_atoi(const char *str)
 		iter++;
 	else if (str[iter] == '-')
 	{
-	    sign = -1;
-	    iter++;
+		sign = -1;
+		iter++;
 	}
 	while (str[iter] != '\0' && str[iter] >= 48 && str[iter] <= 58)
 	{
@@ -24,7 +24,7 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
+/*
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -35,4 +35,4 @@ int	main(void)
 	printf("%d\n", ft_atoi(str));
 	
 	return (0);
-}
+}*/

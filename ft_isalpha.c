@@ -1,11 +1,11 @@
-int	ft_isalpha(int	c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	else
 		return (0);
 }
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -20,7 +20,8 @@ int main()
     char    c;
     for (int loop = 0; loop < NUM_STRINGS; ++loop)
     {
-        c = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvw,?;.:/=$0123456789"[rand() % 70];
+        c = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvw\
+		,?;.:/=$0123456789"[rand() % 70];
         printf("-------------------------------------------------\n");
         printf("RANDOM CHARACTER %d: %d\n", loop + 1, c);
         printf("ft_isalpha: %d\n", ft_isalpha(c));
@@ -32,4 +33,4 @@ int main()
 
     return 0;
 
-}
+}*/
