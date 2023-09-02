@@ -1,21 +1,25 @@
 #include <stddef.h>
 
-void	*ft_memccpy(void *dst, void *src, int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t counter;
-	unsigned char	myChar;
+	unsigned char	unsigned_c;
+	size_t			counter;
 
-	myChar = (unsigned char) c;
+	unsigned_c = (unsigned char) c;
 	counter = 0;
-	while (counter < n &&  (*(char *)(src + counter) != myChar))
+	while (counter < n)
 	{
 		*(char *)(dst + counter) = *(char *)(src + counter);
 		counter++;
+		if (*(char *)(src + counter) == unsigned_c)
+		{
+			*(char *)(dst + counter) = *(char *)(src + counter);
+			return (dst);
+		}
 	}
-	return (dst);
-	
+	return (NULL);
 }
-
+/*
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
@@ -54,11 +58,11 @@ int main(void)
 	printf("Before the function (dst 1): %s\n", dst1);
 	printf("Before the function (dst 2): %s\n", dst2);
 	printf("-------------------------------------------------\n");
-	memccpy(dst1, src, 15);
-	ft_memccpy(dst2, src, 15);
+	memccpy(dst1, src, 'l', 15);
+	ft_memccpy(dst2, src, 'l', 15);
 	printf("After memccpy (dst 1): %s\n", dst1);
 	printf("After ft_memccpy (dst 2): %s\n", dst2);
 	printf("-------------------------------------------------\n");
 	printf("\n\n\n\n\n");
     }
-}
+}*/
