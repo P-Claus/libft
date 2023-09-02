@@ -20,3 +20,4 @@ The project is called libft and is an exercise that requires you to use many thi
 * ft_memset
 * ft_memcpy
 * ft_isalnum
+* ft_memccpy
