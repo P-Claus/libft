@@ -22,7 +22,8 @@ We need to create our own library of functions. The structure of the project is 
 * makefile
 
 ## Included Functions
-* ft_strlen
+<img alt="Static Badge" src="https://img.shields.io/badge/ft__strlen-008F11"> - calculates the length of a string
+
 * ft_strlcpy
 * ft_atoi
 * ft_isalpha
