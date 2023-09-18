@@ -1,4 +1,4 @@
-# My First Campus19 Project: Libft (Static Library in C)
+# Libft (Static Library in C)
 <p >
 	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/P-Claus/libft?color=blueviolet" />
   	<img alt="GitHub repo file count (file type)" src="https://img.shields.io/github/directory-file-count/P-Claus/libft"/>
