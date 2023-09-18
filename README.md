@@ -17,7 +17,6 @@ Welcome to my first project as a student at campus19!
 >
 >The project is called libft and is an exercise that requires you to use many things learnt during the piscine. Most of the functions in this project were written during the piscine (in one form or another).
 
-	TLDR: this project is a replacement for the standard C library and can be used in other projects in the cursus.
 ## Structure
 We need to create our own library of functions. The structure of the project is the following:
 * .c files
