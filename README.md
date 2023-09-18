@@ -15,24 +15,15 @@ Welcome to my first project as a student at campus19!
 
 In this introductory project, I am excited to create my own personal static library in the C programming language. This project marks the beginning of my journey at campus19 and provides an opportunity to dive into C programming concepts while building a fundamental software component.<br>
 The project is called libft and is an exercise that requires you to use many things learnt during the piscine. Most of the functions in this project were written during the piscine (in one form or another).
+
+	TLDR: this project is a replacement for the standard C library and can be used in other projects in the cursus.
 ## Structure
 We need to create our own library of functions. The structure of the project is the following:
 * .c files
 * .h (header) file
 * makefile
 
-## Included Functions
-<img alt="Static Badge" src="https://img.shields.io/badge/ft__strlen-008F11"> - calculates the length of a string
+### Functions from `<string.h>` library
+* [`ft_strlen`](https://github.com/P-Claus/libft/blob/main/ft_strlen.c) - calculates the length of a string
 
-* ft_strlcpy
-* ft_atoi
-* ft_isalpha
-* ft_isdigit
-* ft_isascii
-* ft_isprint
-* ft_toupper
-* ft_tolower
-* ft_memset
-* ft_memcpy
-* ft_isalnum
-* ft_memccpy
+
