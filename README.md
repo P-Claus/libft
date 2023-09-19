@@ -26,4 +26,10 @@ We need to create our own library of functions. The structure of the project is 
 ### Functions from `<string.h>` library
 * [`ft_strlen`](https://github.com/P-Claus/libft/blob/main/ft_strlen.c) - calculates the length of a string
 
+### Functions from `<ctype.h>` library
+* [`ft_isalnum`](https://github.com/P-Claus/libft/blob/main/ft_isalnum.c) - tests if the character is a digit or alphabetical
+* [`ft_isalnum`](https://github.com/P-Claus/libft/blob/main/ft_isascii.c) - tests if the character is an ascii value
 
+
+## Main Functions
+In order to test the separate functions while coding, I used the main files that can be found in [`this repo`](https://github.com/P-Claus/libft_main_functions).
