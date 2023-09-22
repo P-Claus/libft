@@ -1,5 +1,5 @@
 # Libft (Static Library in C)
-![libft header](https://github.com/P-Claus/P-Claus/blob/main/LIBFT.png)
+![libft header](https://github.com/P-Claus/libft/blob/main/subject/LIBFT.png)
 
 <p align='center'>
 	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/P-Claus/libft?color=blueviolet" />
