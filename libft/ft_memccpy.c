@@ -1,11 +1,11 @@
 #include <stddef.h>
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void *ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	unsigned char	unsigned_c;
-	size_t			counter;
+	unsigned char unsigned_c;
+	size_t counter;
 
-	unsigned_c = (unsigned char) c;
+	unsigned_c = (unsigned char)c;
 	counter = 0;
 	while (counter < n)
 	{
@@ -44,7 +44,7 @@ int main(void)
 				src[i] = rand() % 26 + 'A';
 		}
 		src[string_length] = '\0';
-    
+
 	char dst1[string_length + 1];
 	char dst2[string_length + 1];
 
@@ -64,5 +64,5 @@ int main(void)
 	printf("After ft_memccpy (dst 2): %s\n", dst2);
 	printf("-------------------------------------------------\n");
 	printf("\n\n\n\n\n");
-    }
+	}
 }*/
