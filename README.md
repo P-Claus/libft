@@ -19,11 +19,8 @@ In this introductory project, I am excited to create my own personal static libr
 
 The project is called libft and is an exercise that requires you to use many things learnt during the piscine. Most of the functions in this project were written during the piscine (in one form or another).
 
-## Structure
-We need to create our own library of functions. The structure of the project is the following:
-* .c files
-* .h (header) file
-* makefile
+## Mandatory functions
+
 
 ### Functions from `<string.h>` library
 * [`ft_strlen`](https://github.com/P-Claus/libft/blob/main/ft_strlen.c) - calculates the length of a string
