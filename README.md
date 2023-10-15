@@ -1,17 +1,17 @@
 # Libft (Static Library in C)
-![libft header](https://github.com/P-Claus/libft/blob/main/subject/LIBFT.png)
+![libft header](https://github.com/P-Claus/libft/blob/main/subject/LIBFT-header.png)
 
 <p align='center'>
-	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/P-Claus/libft?color=blueviolet" />
-  	<img alt="GitHub repo file count (file type)" src="https://img.shields.io/github/directory-file-count/P-Claus/libft"/>
-	<img alt="total lines of code" src="https://sloc.xyz/github/P-Claus/libft/" />
-	<img alt="Code language count" src="https://img.shields.io/github/languages/count/P-Claus/libft?color=blue" />
-	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/P-Claus/libft?color=blue" />
-	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/P-Claus/libft?color=brightgreen" />
+	<a href='https://campus19.be/nl/homepage-nl/' target="_blank"><img alt="Campus 19" src="https://img.shields.io/badge/Campus%2019-071C13" />
+	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/P-Claus/libft?color=071C13" />
+	<img alt="Code language count" src="https://img.shields.io/github/languages/count/P-Claus/libft?color=071C13" />
+	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/P-Claus/libft?color=071C13" />
+	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/P-Claus/libft?color=071C13" />
+ 	<img alt="total lines of code" src="https://sloc.xyz/github/P-Claus/libft/?color=071C13" />
+
 	
 </p>
 
-Welcome to my first project as a student at campus19!
 
 ## Overview
 
