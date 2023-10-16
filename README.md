@@ -28,6 +28,7 @@ The project is called libft and is an exercise that requires you to use many thi
 * [`ft_strlen`](https://github.com/P-Claus/libft/blob/main/ft_strlen.c) - calculates the length of a string
 
 ### Functions from `<ctype.h>` library
+* [`ft_isalpha`](https://github.com/P-Claus/libft/blob/main/ft_isalpha.c) - tests if the character is alphabetical
 * [`ft_isalnum`](https://github.com/P-Claus/libft/blob/main/ft_isalnum.c) - tests if the character is a digit or alphabetical
 * [`ft_isalnum`](https://github.com/P-Claus/libft/blob/main/ft_isascii.c) - tests if the character is an ascii value
 

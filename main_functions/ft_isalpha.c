@@ -6,11 +6,9 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 22:20:18 by pclaus            #+#    #+#             */
-/*   Updated: 2023/10/16 22:27:39 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/10/16 22:24:19 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalpha(int c)
 {
@@ -19,3 +17,32 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <ctype.h>
+
+#define MAX_STRING_LENGTH 1
+#define NUM_STRINGS 20
+
+int main()
+{
+    srand(time(NULL));
+    char    c;
+    for (int loop = 0; loop < NUM_STRINGS; ++loop)
+    {
+        c = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvw\
+		,?;.:/=$0123456789"[rand() % 70];
+        printf("-------------------------------------------------\n");
+        printf("RANDOM CHARACTER %d: %d\n", loop + 1, c);
+        printf("ft_isalpha: %d\n", ft_isalpha(c));
+	printf("isalpha: %d\n", isalpha(c));
+        printf("-------------------------------------------------\n");
+        printf("\n\n\n\n\n");
+        
+    }
+
+    return 0;
+
+}*/
