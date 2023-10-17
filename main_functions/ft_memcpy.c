@@ -1,4 +1,16 @@
-#include <stddef.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/17 14:12:28 by pclaus            #+#    #+#             */
+/*   Updated: 2023/10/17 14:12:44 by pclaus           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void    ft_memcpy(void *dest, void *src, size_t n)
 {
@@ -50,8 +62,8 @@ int main(void)
 	printf("Before the function (dst 1): %s\n", dst1);
 	printf("Before the function (dst 2): %s\n", dst2);
 	printf("-------------------------------------------------\n");
-	memcpy(dst1, src, 15);
-	ft_memcpy(dst2, src, 15);
+	memcpy(dst1, src, 8);
+	ft_memcpy(dst2, src, 8);
 	printf("After memcpy (dst 1): %s\n", dst1);
 	printf("After ft_memcpy (dst 2): %s\n", dst2);
 	printf("-------------------------------------------------\n");
