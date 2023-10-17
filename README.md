@@ -27,6 +27,9 @@ The project is called libft and is an exercise that requires you to use many thi
 ### Functions from `<string.h>` library
 * [`ft_strlen`](https://github.com/P-Claus/libft/blob/main/ft_strlen.c) - calculates the length of a string
 * [`ft_memset`](https://github.com/P-Claus/libft/blob/main/ft_memset.c) - copies the first n characters of the character c to the string, pointed to by *b
+### Functions from `<strings.h>` library
+* [`ft_bzero`](https://github.com/P-Claus/libft/libft/srcblob/main/ft_bzero.c) - erases the data in the n bytes of the memory
+       starting at the location pointed to by s, by writing zeros
 ### Functions from `<ctype.h>` library
 * [`ft_isalpha`](https://github.com/P-Claus/libft/blob/main/ft_isalpha.c) - tests if the character is alphabetical
 * [`ft_isdigit`](https://github.com/P-Claus/libft/blob/main/ft_isdigit.c) - tests if the character is a digit
