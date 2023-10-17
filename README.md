@@ -31,8 +31,8 @@ The project is called libft and is an exercise that requires you to use many thi
 * [`ft_isalpha`](https://github.com/P-Claus/libft/blob/main/ft_isalpha.c) - tests if the character is alphabetical
 * [`ft_isdigit`](https://github.com/P-Claus/libft/blob/main/ft_isdigit.c) - tests if the character is a digit
 * [`ft_isalnum`](https://github.com/P-Claus/libft/blob/main/ft_isalnum.c) - tests if the character is a digit or alphabetical
-* [`ft_isalnum`](https://github.com/P-Claus/libft/blob/main/ft_isascii.c) - tests if the character is an ascii value
+* [`ft_isascii`](https://github.com/P-Claus/libft/blob/main/ft_isascii.c) - tests if the character is an ascii value
 
 
 ## Main Functions
-In order to test the separate functions while coding, I used the main files that can be found in [`this repo`](https://github.com/P-Claus/libft_main_functions).
+I removed the main functions in the function files to hand in, but the files with a main function included are available in [`this repo`](https://github.com/P-Claus/libft_main_functions).
