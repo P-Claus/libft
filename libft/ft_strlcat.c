@@ -6,13 +6,13 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 14:22:28 by pclaus            #+#    #+#             */
-/*   Updated: 2023/10/18 14:26:00 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/10/18 14:54:55 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+static int	ft_calculate_length(const char *str)
 {
 	int	len;
 
@@ -29,7 +29,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	int	index;
 	int	src_index;
 
-	src_len = ft_strlen(src) -1;
+	src_len = ft_calculate_length(src) -1;
 	dst_len = size -1;
 	index = dst_len; 
 	src_index = 0;
@@ -50,9 +50,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 int	main(void)
 {
 	char str[] = "Hello world";
-	char dst[20] = "this is id my haha";
+	char str_ft[] = "Hello world";
+	char dst[25] = "this is id my haha";
+	char dst_ft[25] = "this is id my haha";
 	printf("%lu\n", strlcat(dst, str, sizeof(dst)));
 	printf("%lu\n", sizeof(dst));
-	printf("%d\n", ft_strlcat(dst, str, sizeof(dst)));
 	printf("%s\n", dst);
+	printf("-------------------\n");
+	printf("%lu\n", ft_strlcat(dst_ft, str_ft, sizeof(dst_ft)));
+	printf("%lu\n", sizeof(dst_ft));
+	printf("%s\n", dst_ft);
 }
