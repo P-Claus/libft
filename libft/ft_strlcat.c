@@ -1,4 +1,17 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/18 14:22:28 by pclaus            #+#    #+#             */
+/*   Updated: 2023/10/18 14:26:00 by pclaus           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 int	ft_strlen(const char *str)
 {
 	int	len;
@@ -9,7 +22,7 @@ int	ft_strlen(const char *str)
 	return (len);
 }
 
-int	ft_strlcat(char *dst, const char *src, int size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	int	src_len;
 	int	dst_len;
