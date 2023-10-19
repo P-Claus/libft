@@ -9,7 +9,6 @@
 	<img alt="Code language count" src="https://img.shields.io/github/languages/count/P-Claus/libft?color=071C13" />
 	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/P-Claus/libft?color=071C13" />
 	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/P-Claus/libft?color=071C13" />
- 	<img alt="total lines of code" src="https://sloc.xyz/github/P-Claus/libft/?color=071C13" />
 
 	
 </p>
