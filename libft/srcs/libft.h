@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 22:15:12 by pclaus            #+#    #+#             */
-/*   Updated: 2023/10/20 18:14:11 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/10/20 21:43:06 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	ft_isascii(int c);
 int	ft_tolower(int c);
 int	ft_toupper(int c);
 int	ft_atoi(const char *str);
+int     ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t  ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
