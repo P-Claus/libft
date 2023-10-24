@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 22:15:12 by pclaus            #+#    #+#             */
-/*   Updated: 2023/10/21 18:25:37 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/10/24 14:38:47 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <stddef.h>
 #include <stdlib.h>
-
+#include <unistd.h>
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
