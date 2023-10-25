@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 22:15:12 by pclaus            #+#    #+#             */
-/*   Updated: 2023/10/25 13:42:25 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/10/25 14:49:41 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ char    *ft_strchr(const char *str, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strdup(const char *str);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
-
+char    *ft_strjoin(char const *s1, char const *s2);
 #endif
