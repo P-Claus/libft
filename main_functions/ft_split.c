@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 17:31:23 by pclaus            #+#    #+#             */
-/*   Updated: 2023/10/28 18:25:42 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/10/28 18:24:14 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,3 +97,23 @@ char	**ft_split(char const *s, char c)
 	strings[index] = 0;
 	return (strings);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{	
+	const char *string = "He.is.the.best.friend.I.have.ever.had!";
+	char c = '.';
+	printf("The number of substrings is: %d\n", number_of_substrings(string, c));
+	char **result = ft_split(string, c);
+	if (result == NULL)
+		printf("Memory allocation failed\n");
+
+	
+	for (int i = 0; result[i] != NULL; i++)
+	{
+		printf("%s\n", result[i]);
+	}
+		
+	free(result);
+
+}*/
