@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 18:31:38 by pclaus            #+#    #+#             */
-/*   Updated: 2023/10/29 22:21:19 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/10/29 22:20:22 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,3 +93,15 @@ char	*ft_itoa(int n)
 		s = itoa_pos(s, n, last_index, amount_of_digits);
 	return (s);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	printf("The string is: %s\n", ft_itoa(-8789));	
+	printf("The string is: %s\n", ft_itoa(0));	
+	printf("The string is: %s\n", ft_itoa(-1));	
+	printf("The string is: %s\n", ft_itoa(1));	
+	printf("The string is: %s\n", ft_itoa(67896));	
+	printf("The string is: %s\n", ft_itoa(-987560));	
+	printf("The string is: %s\n", ft_itoa(89));	
+}*/
