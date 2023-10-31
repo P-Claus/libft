@@ -6,57 +6,43 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 14:22:28 by pclaus            #+#    #+#             */
-/*   Updated: 2023/10/18 21:59:15 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/10/31 14:06:16 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_calculate_length(const char *str)
-{
-	int	len;
-
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-	return (len);
-}
-
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	dst_len;
-	int		src_len;
-	int		src_index;
-	int		dst_index;
+	size_t	dst_index;
+	size_t	src_index;
 
-	dst_len = ft_calculate_length(dst);
-	src_len = ft_calculate_length(src);
+	dst_index = 0;
 	src_index = 0;
-	dst_index = dst_len;
-	while (src [src_index] != '\0' && dst_index < (int) size - 1)
-	{
-		dst[dst_index] = src[src_index];
+	while (dst[dst_index] && dst_index < size)
 		dst_index++;
+	while (src[src_index] && (dst_index + src_index + 1) < size)
+	{
+		dst[dst_index + src_index] = src[src_index];
 		src_index++;
 	}
-	dst[dst_index] = '\0';
-	return (dst_len + src_len);
+	if (dst_index < size)
+		dst[dst_index + src_index] = '\0';
+	return (dst_index + ft_strlen(src));
 }
-/*
-#include <string.h>
-#include <stdio.h>
 
-int	main(void)
-{
-	char str[] = "";
-	char str_ft[] = "";
-	char dst[22] = "this is id my haha";
-	char dst_ft[22] = "this is id my haha";
-	printf("%lu\n", strlcat(dst, str, sizeof(dst)));
-	printf("%lu\n", sizeof(dst));
-	printf("%s\n", dst);
-	printf("-------------------\n");
-	printf("%lu\n", ft_strlcat(dst_ft, str_ft, sizeof(dst_ft)));
-	printf("%lu\n", sizeof(dst_ft));
-	printf("%s\n", dst_ft);
-}*/
+#include <stdio.h>
+int main() {
+    char destination[20] = "Hello, ";
+    const char *source = "World!";
+    size_t destination_size = sizeof(destination);
+
+    printf("Original destination: %s\n", destination);
+
+    size_t result = ft_strlcat(destination, source, destination_size);
+
+    printf("Concatenated string: %s\n", destination);
+    printf("Total length after concatenation: %zu\n", result);
+
+    return 0;
+}
