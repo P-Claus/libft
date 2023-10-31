@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 21:47:50 by pclaus            #+#    #+#             */
-/*   Updated: 2023/10/19 22:08:28 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/10/31 14:20:40 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	int	counter;
+	size_t	counter;
 
 	counter = 0;
 	if (!str)
 		return (0);
-	while (str[counter] != '\0')
+	while (counter <= ft_strlen(str))
 	{
 		if (str[counter] == c)
 			return ((char *) str + counter);
