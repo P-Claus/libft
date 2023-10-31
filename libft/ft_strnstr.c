@@ -6,45 +6,54 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 15:41:06 by pclaus            #+#    #+#             */
-/*   Updated: 2023/10/21 17:15:13 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/10/31 18:59:40 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_calculate_length(const char *str)
-{
-	size_t	len;
-
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-	return (len);
-}
-
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	haystack_index;
-	size_t	needle_index;
-	size_t	needle_length;
+	size_t	h;
+	size_t	n;
 
-	haystack_index = 0;
-	needle_index = 0;
-	needle_length = ft_calculate_length(needle);
-	while (*(haystack + haystack_index) != '\0' && haystack_index < len)
+	h = 0;
+	n = 0;
+	if (!needle)
+		return (char *)(haystack);
+	while (haystack[h] != '\0')
 	{
-		while (*(haystack + haystack_index) == *(needle + needle_index) \
-				&& needle_index < needle_length)
+		while ((haystack[h + n]) == needle[n] \
+				&& (h + n) < len)
 		{
-			haystack_index++;
-			needle_index++;
-			if (needle_index == needle_length)
-				return ((char *)(haystack + (haystack_index - needle_length)));
+			if (haystack[h + n] == '\0' && needle[n] == '\0')
+				return ((char *)&haystack[h]);
+			n++;
 		}
-		haystack_index++;
-		needle_index = 0;
+		if (needle[n] == '\0')
+			return ((char *)(haystack + h ));
+		h++;
 	}
-	if (haystack_index == len)
-		return (0);
 	return (0);
 }
+/*
+#include <stdio.h>
+
+char *ft_strnstr(const char *haystack, const char *needle, size_t len);
+
+int main() {
+    const char *haystack = "This is a sample string for testing.";
+    const char *needle = "sample";
+    size_t len = 20; // The maximum number of characters to search in haystack
+
+    char *result = ft_strnstr(haystack, needle, len);
+
+    if (result) {
+        printf("Needle found: %s\n", result);
+    } else {
+        printf("Needle not found.\n");
+    }
+
+    return 0;
+}
+*/
