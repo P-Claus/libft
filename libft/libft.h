@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 22:15:12 by pclaus            #+#    #+#             */
-/*   Updated: 2023/10/31 06:56:13 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/10/31 12:03:26 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 //string.h library functions
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-void	ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
