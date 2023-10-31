@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:12:28 by pclaus            #+#    #+#             */
-/*   Updated: 2023/10/31 12:01:42 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/10/31 12:06:09 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		*(char *)(dest + counter) = *(char *)(src + counter);
 		counter++;
 	}
+	return (dest);
 }
