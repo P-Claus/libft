@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:58:30 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/01 15:51:10 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/01 21:05:53 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_putnbr_fd(int n, int fd)
 			ft_putchar_fd('-', fd);
 			n *= -1;
 		}
-		if (n > 10)
+		if (n > 9)
 			ft_putnbr_fd(n / 10, fd);
 		ft_putchar_fd((n % 10) + '0', fd);
 	}
