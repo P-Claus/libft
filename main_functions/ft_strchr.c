@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 21:47:50 by pclaus            #+#    #+#             */
-/*   Updated: 2023/10/31 14:19:34 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/01 08:54:24 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,18 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	size_t	counter;
-
-	counter = 0;
-	if (!str)
-		return (0);
-	while (counter <= ft_strlen(str))
+	while (*str != (char)c)
 	{
-		if (str[counter] == c)
-			return ((char *) str + counter);
-		counter++;
+		if (!str)
+		{
+			str++;
+			return (0);
+		}
 	}
-	return (0);
+	return ((char *)str);
 }
-/*
+
+
 #include <stdio.h>
 #include <string.h>
 
@@ -37,4 +35,4 @@ int	main(void)
 
 	printf("The result of strchr is: %s\n", strchr(str, 'a'));
 	printf("The result of ft_strchr is: %s\n", ft_strchr(str, 'a'));
-}*/
+}
