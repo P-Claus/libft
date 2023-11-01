@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 22:02:46 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/01 15:25:44 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/01 20:35:10 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substring;
 
-	if (!s)
+	if ((!s && start == 0 && len == 0) || !s)
 		return (0);
 	if (ft_strlen(s) < start)
 		len = 0;
@@ -26,5 +26,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!substring)
 		return (0);
 	ft_strlcpy(substring, s + start, len + 1);
+	substring[len] = '\0'; 
 	return (substring);
 }
