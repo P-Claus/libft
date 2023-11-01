@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 20:34:44 by pclaus            #+#    #+#             */
-/*   Updated: 2023/10/26 18:56:40 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/01 17:22:35 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	len;
-	size_t	start;
-	size_t	last;
+	int		start;
+	int		last;
 	char	*trimmed_string;
 
 	start = 0;
 	last = ft_strlen(s1) - 1;
-	if (s1 == NULL || set == NULL)
+	if (!s1 || !set)
 		return (0);
-	while (s1[start] && ft_strchr(set, s1[start]))
+	while (start <= last && ft_strchr(set, s1[start]))
 		start++;
-	while (last > start && ft_strchr(set, s1[last]))
+	if (last < start)
+		return (ft_strdup(s1 + last + 1));
+	while (ft_strchr(set, s1[last]) && last >= 0)
 		last--;
-	len = last - start + 1;
-	trimmed_string = (char *) malloc((len + 1) * sizeof(char));
+	trimmed_string = (char *) malloc((last - start + 2) * sizeof(char));
 	if (!trimmed_string)
 		return (0);
-	ft_strlcpy(trimmed_string, s1 + start, len + 1);
+	ft_strlcpy(trimmed_string, &s1[start], last - start + 2);
 	return (trimmed_string);
 }
