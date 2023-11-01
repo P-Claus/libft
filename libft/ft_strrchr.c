@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 18:18:58 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/01 17:09:26 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/01 21:00:20 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	index = ft_strlen(s);
 	while (index >= 0)
 	{
-		if (s[index] == c)
+		if (s[index] == (char)c)
 			return ((char *)&s[index]);
 		index--;
 	}
