@@ -6,20 +6,11 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 17:31:23 by pclaus            #+#    #+#             */
-/*   Updated: 2023/10/28 18:25:42 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/01 16:51:56 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	check_delimiter(char c, char del)
-{
-	if (c == del)
-		return (1);
-	if (c == 0)
-		return (1);
-	return (0);
-}
 
 static int	number_of_substrings(char const *s, char c)
 {
@@ -27,44 +18,30 @@ static int	number_of_substrings(char const *s, char c)
 	int	count;
 
 	index = 0;
-	count = 1;
-	while (s[index] != '\0')
+	count = 0;
+	while (*s)
 	{
-		if (check_delimiter(s[index], c))
+		if (*s != c && count == 0)
 		{
-			count++;
+			count = 1;
 			index++;
 		}
-		if (!check_delimiter(s[index], c))
-			index++;
+		else if (*s == c)
+			count = 0;
+		s++;
 	}
-	return (count);
+	return (index);
 }
 
-static int	get_substring_length(char const *s, char c)
+static char	*copy_word(const char *s, int start, int finish)
 {
-	int	len;
-
-	len = 0;
-	while (s[len] && !check_delimiter(s[len], c))
-		len++;
-	return (len);
-}
-
-static char	*copy_substring(const char *s, char c)
-{
-	int		len;
 	int		index;
 	char	*substring;
 
 	index = 0;
-	len = get_substring_length(s, c);
-	substring = (char *) malloc(sizeof(char) * (len + 1));
-	while (index < len && s[index] != c)
-	{
-		substring[index] = s[index];
-		index++;
-	}
+	substring = malloc((finish - start + 1) * sizeof(char));
+	while (start < finish)
+		substring[index++] = s[start++];
 	substring[index] = '\0';
 	return (substring);
 }
@@ -73,27 +50,26 @@ char	**ft_split(char const *s, char c)
 {
 	int		index;
 	char	**strings;
+	size_t	i;
+	size_t	j;
 
-	index = 0;
-	strings = (char **) malloc(sizeof(char *) \
-			* (number_of_substrings((char *)s, c) + 1));
-	if (!strings)
+	index = -1;
+	i = 0;
+	j = 0;
+	strings = malloc((number_of_substrings(s, c) + 1) * sizeof(char *));
+	if (!s || !strings)
+		return (0);
+	while (i <= ft_strlen(s))
 	{
-		free(strings);
-		return (NULL);
-	}
-	while (*s != '\0')
-	{
-		while (*s && check_delimiter(*s, c))
-			s++;
-		if (*s)
+		if (s[i] != c && index < 0)
+			index = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
 		{
-			strings[index] = copy_substring((char *)s, c);
-			index++;
+			strings[j++] = copy_word(s, index, i);
+			index = -1;
 		}
-		while (*s && !check_delimiter(*s, c))
-			s++;
+		i++;
 	}
-	strings[index] = 0;
+	strings[j] = 0;
 	return (strings);
 }
