@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 20:34:44 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/01 17:22:35 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/03 18:26:37 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (start <= last && ft_strchr(set, s1[start]))
 		start++;
 	if (last < start)
-		return (ft_strdup(""));//(ft_strdup(s1 + last + 1));
+		return (ft_strdup(""));
 	while (ft_strchr(set, s1[last]) && last >= 0)
 		last--;
 	trimmed_string = (char *) malloc((last - start + 2) * sizeof(char));
