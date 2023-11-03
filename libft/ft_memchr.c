@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 21:49:25 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/03 18:24:05 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/03 18:28:06 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (index < n)
 	{
 		if (*str == character)
-			return (void *)(str);
+			return ((void *)(str));
 		index++;
 		str++;
 	}
