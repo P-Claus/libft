@@ -66,6 +66,7 @@ char	**ft_split(char const *s, char c)
 		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
 		{
 			strings[j++] = copy_word(s, index, i);
+			//if strings[j] == NULL --> Free mem and return NULL
 			index = -1;
 		}
 		i++;
