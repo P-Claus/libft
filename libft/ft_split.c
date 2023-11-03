@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 17:31:23 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/01 16:51:56 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/03 22:10:52 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,18 @@ static char	*copy_word(const char *s, int start, int finish)
 	return (substring);
 }
 
+static void	cleanup_strings(char **strings, int count)
+{
+	int	iter;
+
+	iter = 0;
+	while (iter < count)
+	{
+		free(strings[iter]);
+	}
+	free(strings);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		index;
@@ -65,9 +77,14 @@ char	**ft_split(char const *s, char c)
 			index = i;
 		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
 		{
-			strings[j++] = copy_word(s, index, i);
-			//if strings[j] == NULL --> Free mem and return NULL
+			strings[j] = copy_word(s, index, i);
+			if (strings[j] == NULL)
+			{
+				cleanup_strings(strings, j);
+				return (NULL);
+			}
 			index = -1;
+			j++;
 		}
 		i++;
 	}
