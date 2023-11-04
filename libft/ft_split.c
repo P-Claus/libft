@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 17:31:23 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/04 22:12:14 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/04 22:57:22 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,7 @@ char	**ft_split(char const *s, char c)
 			index = i;
 		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
 		{
-			strings[j] = copy_word(s, index, i);
-			if (strings[j] == NULL)
+			if ((strings[j] = copy_word(s, index, i)) == 0)
 			{
 				cleanup_strings(strings, j);	
 				return (NULL);
