@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: pieter <pieter@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 17:31:23 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/03 22:10:52 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/04 14:27:45 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,15 @@ static char	*copy_word(const char *s, int start, int finish)
 
 	index = 0;
 	substring = malloc((finish - start + 1) * sizeof(char));
+	if (!substring)
+		return (NULL);
 	while (start < finish)
 		substring[index++] = s[start++];
 	substring[index] = '\0';
 	return (substring);
 }
 
-static void	cleanup_strings(char **strings, int count)
+static void	*cleanup_strings(char **strings, int count)
 {
 	int	iter;
 
@@ -56,6 +58,17 @@ static void	cleanup_strings(char **strings, int count)
 		free(strings[iter]);
 	}
 	free(strings);
+	return (NULL);
+}
+
+static void	process_split(char **strings, int *index, size_t *j)
+{
+	if (strings[*j] == NULL)
+	{
+		cleanup_strings(strings, *j);
+	}
+	*index = -1;
+	(*j)++;
 }
 
 char	**ft_split(char const *s, char c)
@@ -78,13 +91,7 @@ char	**ft_split(char const *s, char c)
 		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
 		{
 			strings[j] = copy_word(s, index, i);
-			if (strings[j] == NULL)
-			{
-				cleanup_strings(strings, j);
-				return (NULL);
-			}
-			index = -1;
-			j++;
+			process_split(strings, &index, &j);
 		}
 		i++;
 	}
