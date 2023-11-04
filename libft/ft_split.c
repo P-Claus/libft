@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 17:31:23 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/04 21:05:43 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/04 21:46:06 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	number_of_substrings(char const *s, char c)
 	return (index);
 }
 
-static void	*copy_word(const char *s, int start, int finish)
+static char	*copy_word(const char *s, int start, int finish)
 {
 	int		index;
 	char	*substring;
@@ -48,30 +48,14 @@ static void	*copy_word(const char *s, int start, int finish)
 	return (substring);
 }
 
-static void	*cleanup_strings(char **strings, int count)
+void	cleanup_strings(char **strings, size_t j)
 {
-	int	iter;
-
-	iter = 0;
-	while (iter < count)
-	{
-		free(strings[iter]);
-	}
-	free(strings);
-	return (NULL);
-}
-
-static int	process_split(char *copy, char ***strings, int *index, size_t *j)
-{
-	*strings[*j] = copy;
-	if (*strings[*j] == NULL)
-	{
-		cleanup_strings(*strings, *j);
-		return (0);
-	}
-	*index = -1;
-	(*j)++;
-	return (1);
+    while (j > 0)
+    {
+        j--;
+        free(strings[j]);
+    }
+    free(strings);
 }
 
 char	**ft_split(char const *s, char c)
@@ -93,36 +77,17 @@ char	**ft_split(char const *s, char c)
 			index = i;
 		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
 		{
-			if (process_split(copy_word(s, index, i), \
-				&strings, &index, &j) == 0)
+			strings[j] = copy_word(s, index, i);
+			if (strings[j] == NULL)
+			{
+				cleanup_strings(strings, j);	
 				return (NULL);
+			}
+			j++;
+			index = -1;
 		}
 		i++;
 	}
 	strings[j] = 0;
 	return (strings);
-}
-
-#include <stdio.h>
-int main() {
-    char input_string[] = "This is a test string to split";
-    char delimiter = ' ';
-
-    char **result = ft_split(input_string, delimiter);
-
-    if (result) {
-        for (int i = 0; result[i] != NULL; i++) {
-            printf("Substring %d: %s\n", i, result[i]);
-        }
-
-        // Free the memory
-        for (int i = 0; result[i] != NULL; i++) {
-            free(result[i]);
-        }
-        free(result);
-    } else {
-        printf("ft_split returned NULL, indicating an error.\n");
-    }
-
-    return 0;
 }
