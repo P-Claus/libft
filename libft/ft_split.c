@@ -6,7 +6,7 @@
 /*   By: pieter <pieter@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 17:31:23 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/04 14:27:45 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/04 15:54:19 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,14 @@ static int	number_of_substrings(char const *s, char c)
 	return (index);
 }
 
-static char	*copy_word(const char *s, int start, int finish)
+static void	*copy_word(const char *s, int start, int finish)
 {
 	int		index;
 	char	*substring;
 
 	index = 0;
+	if (!start || !finish)
+		return (NULL);
 	substring = malloc((finish - start + 1) * sizeof(char));
 	if (!substring)
 		return (NULL);
