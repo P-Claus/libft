@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/27 17:31:23 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/04 22:57:22 by pclaus           ###   ########.fr       */
+/*   Created: 2023/11/05 17:12:19 by pclaus            #+#    #+#             */
+/*   Updated: 2023/11/05 18:07:54 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,14 +48,15 @@ static char	*copy_word(const char *s, int start, int finish)
 	return (substring);
 }
 
-void	cleanup_strings(char **strings, size_t j)
+static char	**cleanup_strings(char **strings, size_t j)
 {
-    while (j > 0)
-    {
-        j--;
-        free(strings[j]);
-    }
-    free(strings);
+	while (j > 0)
+	{
+		j--;
+		free(strings[j]);
+	}
+	free(strings);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -66,26 +67,22 @@ char	**ft_split(char const *s, char c)
 	size_t	j;
 
 	index = -1;
-	i = 0;
+	i = -1;
 	j = 0;
 	strings = malloc((number_of_substrings(s, c) + 1) * sizeof(char *));
 	if (!s || !strings)
 		return (0);
-	while (i <= ft_strlen(s))
+	while (++i <= ft_strlen(s))
 	{
 		if (s[i] != c && index < 0)
 			index = i;
 		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
 		{
-			if ((strings[j] = copy_word(s, index, i)) == 0)
-			{
-				cleanup_strings(strings, j);	
-				return (NULL);
-			}
-			j++;
+			strings[j] = copy_word(s, index, i);
+			if (strings[j++] == NULL)
+				return (cleanup_strings(strings, j -1));
 			index = -1;
 		}
-		i++;
 	}
 	strings[j] = 0;
 	return (strings);
