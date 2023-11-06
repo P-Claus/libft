@@ -25,7 +25,7 @@ The project is called libft and is an exercise that requires you to use many thi
 
 ### Functions from `<string.h>` library
 * [`ft_strlen`](https://github.com/P-Claus/libft/blob/main/libft/ft_strlen.c): calculates the length of a string
-* [`ft_memset`]() - 
+* [`ft_memset`](https://github.com/P-Claus/libft/blob/main/libft/ft_memset.c): writes a certain amount of bytes (len) of value c to string b 
 * [`ft_memcpy`]() - 
 * [`ft_memmove`]()
 * [`ft_strlcpy`]()
