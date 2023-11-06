@@ -24,18 +24,60 @@ The project is called libft and is an exercise that requires you to use many thi
 
 
 ### Functions from `<string.h>` library
-* [`ft_strlen`](https://github.com/P-Claus/libft/blob/main/ft_strlen.c) - calculates the length of a string
-* [`ft_memset`](https://github.com/P-Claus/libft/blob/main/ft_memset.c) - copies the first n characters of the character c to the string, pointed to by *b
-* [`ft_memcpy`](https://github.com/P-Claus/libft/blob/main/ft_memcpy.c) - copies n bytes from memory address src to dst
-### Functions from `<strings.h>` library
-* [`ft_bzero`](https://github.com/P-Claus/libft/libft/srcblob/main/ft_bzero.c) - erases the data in the n bytes of the memory
-       starting at the location pointed to by s, by writing zeros
-### Functions from `<ctype.h>` library
-* [`ft_isalpha`](https://github.com/P-Claus/libft/blob/main/ft_isalpha.c) - tests if the character is alphabetical
-* [`ft_isdigit`](https://github.com/P-Claus/libft/blob/main/ft_isdigit.c) - tests if the character is a digit
-* [`ft_isalnum`](https://github.com/P-Claus/libft/blob/main/ft_isalnum.c) - tests if the character is a digit or alphabetical
-* [`ft_isascii`](https://github.com/P-Claus/libft/blob/main/ft_isascii.c) - tests if the character is an ascii value
+* [`ft_strlen`](https://github.com/P-Claus/libft/blob/main/libft/ft_strlen.c) - calculates the length of a string
+* [`ft_memset`]() - copies the first n characters of the character c to the string, pointed to by *b
+* [`ft_memcpy`]() - copies n bytes from memory address src to dst
+* [`ft_memmove`]()
+* [`ft_strlcpy`]()
+* [`ft_strlcat`]()
+* [`ft_strchr`]()
+* [`ft_strrchr`]()
+* [`ft_strncmp`]()
+* [`ft_memchr`]()
+* [`ft_memcmp`]()
+* [`ft_strnstr`]()
+* [`ft_strdup`]()
 
+### Functions from `<strings.h>` library
+* [`ft_bzero`]() - erases the data in the n bytes of the memory
+       starting at the location pointed to by s, by writing zeros
+
+### Functions from `<ctype.h>` library
+* [`ft_isalpha`]() - tests if the character is alphabetical
+* [`ft_isdigit`]() - tests if the character is a digit
+* [`ft_isalnum`]() - tests if the character is a digit or alphabetical
+* [`ft_isascii`]() - tests if the character is an ascii value
+* [`ft_isprint`]()
+* [`ft_toupper`]()
+* [`ft_tolower`]()
+
+### Functions from `<stdlib.h>` library
+* [`ft_atoi`]()
+* [`ft_calloc`]()
+
+### Additional functions
+* [`ft_substr`]()
+* [`ft_strjoin`]()
+* [`ft_strtrim`]()
+* [`ft_split`]()
+* [`ft_itoa`]()
+* [`ft_strmapi`]()
+* [`ft_striteri`]()
+* [`ft_putchar_fd`]()
+* [`ft_putstr_fd`]()
+* [`ft_putendl_fd`]()
+* [`ft_putnbr_fd`]()
+
+###Bonus part
+* [`ft_lstnew`]()
+* [`ft_lstadd_front`]()
+* [`ft_lstsize`]()
+* [`ft_lstlast`]()
+* [`ft_lstadd_back`]()
+* [`ft_lstdelone`]()
+* [`ft_lstclear`]()
+* [`ft_lstiter`]()
+* [`ft_lstmap`]()
 
 ## Main Functions
-I removed the main functions in the function files to hand in, but the files with a main function included are available in [`this repo`](https://github.com/P-Claus/libft_main_functions).
+I removed the main functions in the function files to hand in, but the files with a main function included are available in [`this directory`](https://github.com/P-Claus/libft/tree/main/main_functions).
