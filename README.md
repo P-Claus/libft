@@ -25,8 +25,8 @@ The project is called libft and is an exercise that requires you to use many thi
 
 ### Functions from `<string.h>` library
 * [`ft_strlen`](https://github.com/P-Claus/libft/blob/main/libft/ft_strlen.c) - calculates the length of a string
-* [`ft_memset`]() - copies the first n characters of the character c to the string, pointed to by *b
-* [`ft_memcpy`]() - copies n bytes from memory address src to dst
+* [`ft_memset`]() - 
+* [`ft_memcpy`]() - 
 * [`ft_memmove`]()
 * [`ft_strlcpy`]()
 * [`ft_strlcat`]()
@@ -39,14 +39,13 @@ The project is called libft and is an exercise that requires you to use many thi
 * [`ft_strdup`]()
 
 ### Functions from `<strings.h>` library
-* [`ft_bzero`]() - erases the data in the n bytes of the memory
-       starting at the location pointed to by s, by writing zeros
+* [`ft_bzero`]() - 
 
 ### Functions from `<ctype.h>` library
-* [`ft_isalpha`]() - tests if the character is alphabetical
-* [`ft_isdigit`]() - tests if the character is a digit
-* [`ft_isalnum`]() - tests if the character is a digit or alphabetical
-* [`ft_isascii`]() - tests if the character is an ascii value
+* [`ft_isalpha`]() - 
+* [`ft_isdigit`]() - 
+* [`ft_isalnum`]() - 
+* [`ft_isascii`]() - 
 * [`ft_isprint`]()
 * [`ft_toupper`]()
 * [`ft_tolower`]()
@@ -68,7 +67,7 @@ The project is called libft and is an exercise that requires you to use many thi
 * [`ft_putendl_fd`]()
 * [`ft_putnbr_fd`]()
 
-###Bonus part
+### Bonus part
 * [`ft_lstnew`]()
 * [`ft_lstadd_front`]()
 * [`ft_lstsize`]()
