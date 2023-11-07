@@ -55,17 +55,17 @@ The project is called libft and is an exercise that requires you to use many thi
 * [`ft_calloc`](https://github.com/P-Claus/libft/blob/main/libft/ft_calloc.c): allocates memory for a number of elements and sets that memory to 0
 
 ### Additional functions
-* [`ft_substr`]()
-* [`ft_strjoin`]()
-* [`ft_strtrim`]()
-* [`ft_split`]()
-* [`ft_itoa`]()
-* [`ft_strmapi`]()
-* [`ft_striteri`]()
-* [`ft_putchar_fd`]()
-* [`ft_putstr_fd`]()
-* [`ft_putendl_fd`]()
-* [`ft_putnbr_fd`]()
+* [`ft_substr`](https://github.com/P-Claus/libft/blob/main/libft/ft_substr.c): creates and returns a substring from a string
+* [`ft_strjoin`](https://github.com/P-Claus/libft/blob/main/libft/ft_strjoin.c): creates a new string by concatenating s1 and s2
+* [`ft_strtrim`](https://github.com/P-Claus/libft/blob/main/libft/ft_strtrim.c): removes characters specified in set from start and end in s1
+* [`ft_split`](https://github.com/P-Claus/libft/blob/main/libft/ft_split.c): creates a new array of strings from an existing string using a separator
+* [`ft_itoa`](https://github.com/P-Claus/libft/blob/main/libft/ft_itoa.c): converts an int to a string
+* [`ft_strmapi`](https://github.com/P-Claus/libft/blob/main/libft/ft_strmapi.c): creates a new string by applying a function to each character in an existing string
+* [`ft_striteri`](https://github.com/P-Claus/libft/blob/main/libft/ft_striteri.c): applies a function to each character in a string and modifying it if necessary
+* [`ft_putchar_fd`](https://github.com/P-Claus/libft/blob/main/libft/ft_putchar_fd.c): outputs c to the file descriptor
+* [`ft_putstr_fd`](https://github.com/P-Claus/libft/blob/main/libft/ft_putstr_fd.c): outputs a string to the file descriptor
+* [`ft_putendl_fd`](https://github.com/P-Claus/libft/blob/main/libft/ft_putendl_fd.c): outputs a string to the file descriptor, followed by a newline
+* [`ft_putnbr_fd`](https://github.com/P-Claus/libft/blob/main/libft/ft_putnbr_fd.c): outputs an int n to the file descriptor
 
 ## Bonus part
 * [`ft_lstnew`]()
