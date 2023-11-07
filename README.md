@@ -68,15 +68,15 @@ The project is called libft and is an exercise that requires you to use many thi
 * [`ft_putnbr_fd`](https://github.com/P-Claus/libft/blob/main/libft/ft_putnbr_fd.c): outputs an int n to the file descriptor
 
 ## Bonus part
-* [`ft_lstnew`]()
-* [`ft_lstadd_front`]()
-* [`ft_lstsize`]()
-* [`ft_lstlast`]()
-* [`ft_lstadd_back`]()
-* [`ft_lstdelone`]()
-* [`ft_lstclear`]()
-* [`ft_lstiter`]()
-* [`ft_lstmap`]()
+* [`ft_lstnew`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstnew_bonus.c): creates a new node in a linked list
+* [`ft_lstadd_front`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstadd_front_bonus.c): adds a new node to the front of an existing linked list
+* [`ft_lstsize`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstsize_bonus.c): returns the size of a linked list
+* [`ft_lstlast`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstlast_bonus.c): returns the last node in a linked list
+* [`ft_lstadd_back`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstadd_back_bonus.c): adds a node to the back of a linked list
+* [`ft_lstdelone`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstdelone_bonus.c): takes del function as parameter and frees the memory of a node's content and frees the node
+* [`ft_lstclear`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstclear_bonus.c): clears a list by deleting and freeing every node in a linked list
+* [`ft_lstiter`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstiter_bonus.c): iterates the linked list and applies the function f on the content of each node
+* [`ft_lstmap`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstmap_bonus.c): creates a new linked list by applying the function f to the content of each node
 
 ## Main Functions
 I removed the main functions in the function files to hand in, but the files with a main function included are available in [`this directory`](https://github.com/P-Claus/libft/tree/main/main_functions).

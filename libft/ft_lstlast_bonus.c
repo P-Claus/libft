@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 09:18:20 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/02 22:39:16 by pclaus           ###   ########.fr       */
+/*   Created: 2023/11/07 17:15:45 by pclaus            #+#    #+#             */
+/*   Updated: 2023/11/07 17:15:58 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*node;
-
-	node = (t_list *)malloc(sizeof(t_list));
-	if (node)
+	while (lst != NULL)
 	{
-		node->content = content;
-		node->next = NULL;
+		if (lst->next == NULL)
+			return (lst);
+		lst = lst->next;
 	}
-	return (node);
+	return (NULL);
 }
