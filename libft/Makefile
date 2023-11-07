@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+         #
+#    By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/10/26 17:51:39 by pclaus            #+#    #+#              #
-#    Updated: 2023/11/04 15:28:05 by pclaus           ###   ########.fr        #
+#    Created: 2023/11/07 17:41:01 by pclaus            #+#    #+#              #
+#    Updated: 2023/11/07 17:41:03 by pclaus           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,9 @@ SOURCES = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.
 
 OBJ_FILES = ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_memchr.o ft_memcmp.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putstr_fd.o ft_strdup.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_substr.o ft_tolower.o ft_toupper.o ft_memcpy.o ft_strchr.o ft_isprint.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_striteri.o ft_putendl_fd.o ft_putnbr_fd.o
 
-BONUS_SOURCES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+BONUS_SOURCES = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
-BONUS_OBJ_FILES = ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o
+BONUS_OBJ_FILES = ft_lstnew_bonus.o ft_lstadd_front_bonus.o ft_lstsize_bonus.o ft_lstlast_bonus.o ft_lstadd_back_bonus.o ft_lstdelone_bonus.o ft_lstclear_bonus.o ft_lstiter_bonus.o ft_lstmap_bonus.o
 
 all: $(NAME)
 
@@ -30,7 +30,7 @@ $(NAME):
 	@ar rcs $(NAME) $(OBJ_FILES)
 
 clean:
-	@rm -f $(OBJ_FILES)
+	@rm -f $(OBJ_FILES) $(BONUS_OBJ_FILES)
 
 fclean: clean
 	@rm -f $(NAME)
@@ -39,3 +39,5 @@ re:	fclean $(NAME)
 
 bonus: $(OBJ_FILES) $(BONUS_OBJ_FILES)
 	ar rcs $(NAME) $(OBJS_FILES) $(BONUS_OBJ_FILES)
+
+.PHONY:			all clean fclean re bonus
