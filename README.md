@@ -26,17 +26,17 @@ The project is called libft and is an exercise that requires you to use many thi
 ### Functions from `<string.h>` library
 * [`ft_strlen`](https://github.com/P-Claus/libft/blob/main/libft/ft_strlen.c): calculates the length of a string
 * [`ft_memset`](https://github.com/P-Claus/libft/blob/main/libft/ft_memset.c): writes a certain amount of bytes (len) of value c to string b 
-* [`ft_memcpy`]() - 
-* [`ft_memmove`]()
-* [`ft_strlcpy`]()
-* [`ft_strlcat`]()
-* [`ft_strchr`]()
-* [`ft_strrchr`]()
-* [`ft_strncmp`]()
-* [`ft_memchr`]()
-* [`ft_memcmp`]()
-* [`ft_strnstr`]()
-* [`ft_strdup`]()
+* [`ft_memcpy`](https://github.com/P-Claus/libft/blob/main/libft/ft_memcpy.c): copies certain amount of bytes (n) from src ro dst 
+* [`ft_memmove`](https://github.com/P-Claus/libft/blob/main/libft/ft_memmove.c): copies a certain amount of bytes (len) from src to dst (there may be overlap)
+* [`ft_strlcpy`](https://github.com/P-Claus/libft/blob/main/libft/ft_strlcpy.c): copies up to dstsize -1 from src to dst and null-terminates the new string (returns the string it tried to create so length of src)
+* [`ft_strlcat`](https://github.com/P-Claus/libft/blob/main/libft/ft_strlcat.c): concatenates src to the end of dst and makes sure the new string is not longer than size to prevent buffer overflow
+* [`ft_strchr`](https://github.com/P-Claus/libft/blob/main/libft/ft_strchr.c): searches if c is in the string and returns a pointer to the first c
+* [`ft_strrchr`](https://github.com/P-Claus/libft/blob/main/libft/ft_strrchr.c): searches if c is in a string and returns a pointer to the last c
+* [`ft_strncmp`](https://github.com/P-Claus/libft/blob/main/libft/ft_strncmp.c): compares a maximum of n characters of s1 and s2 and returns the difference in ASCII value
+* [`ft_memchr`](https://github.com/P-Claus/libft/blob/main/libft/ft_memchr.c): searches a memory block forc(converted to unsigned char) and returns a pointer to the byte
+* [`ft_memcmp`](https://github.com/P-Claus/libft/blob/main/libft/ft_memcmp.c): compares s1 and s2 up to n characters and returns the difference in ASCII value
+* [`ft_strnstr`](https://github.com/P-Claus/libft/blob/main/libft/ft_strnstr.c): this looks for a substring in a string and returns a pointer to the substring
+* [`ft_strdup`](https://github.com/P-Claus/libft/blob/main/libft/ft_strdup.c): duplicates a string and returns a pointer to the new string
 
 ### Functions from `<strings.h>` library
 * [`ft_bzero`]() - 
