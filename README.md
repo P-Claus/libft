@@ -39,20 +39,20 @@ The project is called libft and is an exercise that requires you to use many thi
 * [`ft_strdup`](https://github.com/P-Claus/libft/blob/main/libft/ft_strdup.c): duplicates a string and returns a pointer to the new string
 
 ### Functions from `<strings.h>` library
-* [`ft_bzero`]() - 
+* [`ft_bzero`](https://github.com/P-Claus/libft/blob/main/libft/ft_bzero.c): writes n-bytes of 0 to a string s
 
 ### Functions from `<ctype.h>` library
-* [`ft_isalpha`]() - 
-* [`ft_isdigit`]() - 
-* [`ft_isalnum`]() - 
-* [`ft_isascii`]() - 
-* [`ft_isprint`]()
-* [`ft_toupper`]()
-* [`ft_tolower`]()
+* [`ft_isalpha`](https://github.com/P-Claus/libft/blob/main/libft/ft_isalpha.c): checks if c is alphabetical 
+* [`ft_isdigit`](https://github.com/P-Claus/libft/blob/main/libft/ft_isdigit.c): checks if c is a digit 
+* [`ft_isalnum`](https://github.com/P-Claus/libft/blob/main/libft/ft_isalnum.c): checks if c is a digit or alphabetical 
+* [`ft_isascii`](https://github.com/P-Claus/libft/blob/main/libft/ft_isascii.c): checks if c is an ASCII value 
+* [`ft_isprint`](https://github.com/P-Claus/libft/blob/main/libft/ft_isprint.c): checks if c is a printale character
+* [`ft_toupper`](https://github.com/P-Claus/libft/blob/main/libft/ft_toupper.c): converts c to uppercase
+* [`ft_tolower`](https://github.com/P-Claus/libft/blob/main/libft/ft_tolower.c): converts c to lowercase
 
 ### Functions from `<stdlib.h>` library
-* [`ft_atoi`]()
-* [`ft_calloc`]()
+* [`ft_atoi`](https://github.com/P-Claus/libft/blob/main/libft/ft_atoi.c): converts string to integer
+* [`ft_calloc`](https://github.com/P-Claus/libft/blob/main/libft/ft_calloc.c): allocates memory for a number of elements and sets that memory to 0
 
 ### Additional functions
 * [`ft_substr`]()
