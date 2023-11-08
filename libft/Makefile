@@ -25,8 +25,8 @@ BONUS_OBJ_FILES = $(BONUS_SOURCES:.c=.o)
 all: $(NAME)
 
 $(NAME):
-	echo "making the library"
-	@cc $(CFLAGS) $(SOURCES)
+	@echo "making the library"
+	cc $(CFLAGS) -c $(SOURCES)
 	@ar rcs $(NAME) $(OBJ_FILES)
 
 clean:
@@ -37,9 +37,9 @@ fclean: clean
 
 re:	fclean $(NAME)
 
-bonus: $(OBJ_FILES) $(BONUS_OBJ_FILES)
-	echo "making the library with the bonus"
-	@cc $(CFLAGS) $(BONUS_SOURCES)
-	ar rcs $(NAME) $(OBJ_FILES) $(BONUS_OBJ_FILES)
+bonus: 
+	@echo "making the library with the bonus"
+	cc $(CFLAGS) -c $(SOURCES) $(BONUS_SOURCES)
+	@ar rcs $(NAME) $(OBJ_FILES) $(BONUS_OBJ_FILES)
 
 .PHONY:			all clean fclean re bonus
