@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 22:15:12 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/04 15:10:44 by pclaus           ###   ########.fr       */
+/*   Created: 2023/11/10 19:49:52 by pclaus            #+#    #+#             */
+/*   Updated: 2023/11/10 19:50:01 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
 

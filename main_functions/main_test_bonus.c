@@ -309,5 +309,52 @@ int main() {
     	printf("------------------ft_putnbr_fd---------------------\n");
 	printf("\n\n\n\n\n");
 
+
+	//ft_lstnew_bonus
+	printf("------------------ft_lstnew---------------------\n");
+	int value1 = 42;
+    	int value2 = 19;
+	
+    t_list *node1 = ft_lstnew(&value1);
+    t_list *node2 = ft_lstnew(&value2);
+
+    // Check if the nodes were created successfully and print their values
+    if (node1) {
+        printf("Node 1 content: %d\n", *(int *)node1->content);
+        free(node1); // Don't forget to free the memory when done
+    } else {
+        printf("Failed to create Node 1\n");
+    }
+
+    if (node2) {
+        printf("Node 2 content: %d\n", *(int *)node2->content);
+        free(node2);
+    } else {
+        printf("Failed to create Node 2\n");
+    }	
+	printf("\n\n\n\n\n");
+
+
+	//ft_lst_size
+    	printf("------------------ft_lstsize---------------------\n");
+	t_list *new1, *new2, *new3;
+	new1 = ft_lstnew((void *)4);
+	new2 = ft_lstnew((void *)1);
+	new3 = ft_lstnew((void *)9);
+	new1->next = new2;
+	new2->next = new3;
+	printf("First node: %p\n", (void *)new1->content);
+	printf("Second node: %p\n", (void *)new2->content);
+	printf("Third node: %p\n", (void *)new3->content);
+	int size = ft_lstsize(new1);
+	printf("The size is: %d\n", size);
+	free(new1);
+	free(new2);
+	free(new3);
+	printf("\n\n\n\n\n");
+
+
+
+
 }
 
