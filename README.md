@@ -19,6 +19,9 @@ In this introductory project, I am excited to create my own personal static libr
 
 The project is called libft and is an exercise that requires you to use many things learnt during the piscine. Most of the functions in this project were written during the piscine (in one form or another).
 
+## Result
+ ![libft result](https://github.com/P-Claus/libft/blob/main/subject/libft.png)
+
 ## Mandatory functions
 
 
