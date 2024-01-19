@@ -72,7 +72,7 @@ Once I finished the libft project, I started rewriting some of the functions and
 * [`ft_putendl_fd`](https://github.com/P-Claus/libft/blob/main/libft/ft_putendl_fd.c): outputs a string to the file descriptor, followed by a newline
 * [`ft_putnbr_fd`](https://github.com/P-Claus/libft/blob/main/libft/ft_putnbr_fd.c): outputs an int n to the file descriptor
 
-## Functions for linked lists
+### Functions for linked lists
 * [`ft_lstnew`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstnew_bonus.c): creates a new node in a linked list
 * [`ft_lstadd_front`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstadd_front_bonus.c): adds a new node to the front of an existing linked list
 * [`ft_lstsize`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstsize_bonus.c): returns the size of a linked list
