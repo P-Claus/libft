@@ -22,7 +22,10 @@ The project is called libft and is an exercise that requires you to use many thi
 ## Result
  ![libft result](https://github.com/P-Claus/libft/blob/main/subject/libft.png)
 
-## Mandatory functions
+## After libft project
+Once I finished the libft project, I started rewriting some of the functions and makefile to use the library in other projects. The current state of the project is not what I submitted to moulinette. All updates after 18 January 2024 might not pass the moulinette because of changes in some functions and rules in the makefile.
+
+## Functions
 
 
 ### Functions from `<string.h>` library
@@ -69,7 +72,7 @@ The project is called libft and is an exercise that requires you to use many thi
 * [`ft_putendl_fd`](https://github.com/P-Claus/libft/blob/main/libft/ft_putendl_fd.c): outputs a string to the file descriptor, followed by a newline
 * [`ft_putnbr_fd`](https://github.com/P-Claus/libft/blob/main/libft/ft_putnbr_fd.c): outputs an int n to the file descriptor
 
-## Bonus part
+## Functions for linked lists
 * [`ft_lstnew`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstnew_bonus.c): creates a new node in a linked list
 * [`ft_lstadd_front`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstadd_front_bonus.c): adds a new node to the front of an existing linked list
 * [`ft_lstsize`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstsize_bonus.c): returns the size of a linked list
@@ -79,6 +82,3 @@ The project is called libft and is an exercise that requires you to use many thi
 * [`ft_lstclear`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstclear_bonus.c): clears a list by deleting and freeing every node in a linked list
 * [`ft_lstiter`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstiter_bonus.c): iterates the linked list and applies the function f on the content of each node
 * [`ft_lstmap`](https://github.com/P-Claus/libft/blob/main/libft/ft_lstmap_bonus.c): creates a new linked list by applying the function f to the content of each node
-
-## Main Functions
-I removed the main functions in the function files to hand in, but the files with a main function included are available in [`this directory`](https://github.com/P-Claus/libft/tree/main/main_functions).
