@@ -23,7 +23,7 @@ The project is called libft and is an exercise that requires you to use many thi
  ![libft result](https://github.com/P-Claus/libft/blob/main/subject/libft.png)
 
 ## After libft project
-Once I finished the libft project, I started rewriting some of the functions and makefile to use the library in other projects. The current state of the project is not what I submitted to moulinette. All updates after 18 January 2024 might not pass the moulinette because of changes in some functions rules in the makefile.
+Once I finished the libft project, I started rewriting some of the functions and makefile to use the library in other projects. The current state of the project is not what I submitted to moulinette. All updates after 18 January 2024 might not pass the moulinette because of changes in some functions and rules in the makefile.
 
 ## Functions
 
