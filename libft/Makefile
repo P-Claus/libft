@@ -11,27 +11,21 @@ RM		= rm -rf
 SOURCES		= *.c
 OBJ_FILES	= $(SOURCES:.c=.o)
 
-###	FT_PRINTF	###
-
-PRINTF_DIR	= ./ft_printf
-PRINTF_SOURCES	= $(PRINTF_DIR)/*.c
-PRINTF_OBJ	= $(PRINTF_DIR)/*.o
-
 #########################################
 ###		RULES		      ###
 #########################################
 
 all: $(NAME)
 
-$(NAME): $(PRINTF_SOURCES) $(SOURCES) libft.h
-	@$(CC) $(CFLAGS) -c $(SOURCES) $(PRINTF_SOURCES) 
-	@ar rcs $(NAME) $(OBJ_FILES) $(PRINTF_OBJ)
+$(NAME): $(SOURCES) libft.h ft_printf.h
+	@$(CC) $(CFLAGS) -c $(SOURCES)
+	@ar rcs $(NAME) $(OBJ_FILES)
 
 clean:
-	@$(RM) $(OBJ_FILES) $(PRINTF_OBJ)
+	@$(RM) $(OBJ_FILES)
 
 fclean: clean
-	@$(RM) $(NAME) $(PRINTF)
+	@$(RM) $(NAME)
 
 re:
 	@make fclean
