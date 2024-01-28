@@ -1,39 +1,40 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/07 17:41:01 by pclaus            #+#    #+#              #
-#    Updated: 2023/11/07 17:41:03 by pclaus           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+#########################################
+###		CONFIG		      ###
+#########################################
 
-NAME = libft.a
+NAME		= libft.a
 
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS		= -Wall -Werror -Wextra
+CC		= cc
+RM		= rm -rf
 
-CC = cc
+SOURCES		= *.c
+OBJ_FILES	= $(SOURCES:.c=.o)
 
-RM = rm -rf
+###	FT_PRINTF	###
 
-SOURCES = *.c
+PRINTF_DIR	= ./ft_printf
+PRINTF_SOURCES	= $(PRINTF_DIR)/*.c
+PRINTF_OBJ	= $(PRINTF_DIR)/*.o
 
-OBJ_FILES = $(SOURCES:.c=.o)
+#########################################
+###		RULES		      ###
+#########################################
 
 all: $(NAME)
 
-$(NAME): $(SOURCES) libft.h
-	@$(CC) $(CFLAGS) -c $(SOURCES)
-	@ar rcs $(NAME) $(OBJ_FILES)
+$(NAME): $(PRINTF_SOURCES) $(SOURCES) libft.h
+	@$(CC) $(CFLAGS) -c $(SOURCES) $(PRINTF_SOURCES) 
+	@ar rcs $(NAME) $(OBJ_FILES) $(PRINTF_OBJ)
 
 clean:
-	@$(RM) $(OBJ_FILES)
+	@$(RM) $(OBJ_FILES) $(PRINTF_OBJ)
 
 fclean: clean
-	@$(RM) $(NAME)
+	@$(RM) $(NAME) $(PRINTF)
 
-re:	fclean $(NAME)
+re:
+	@make fclean
+	@make
 
 .PHONY:			all clean fclean re 

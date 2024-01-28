@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include "./ft_printf/ft_printf.h"
 
 typedef struct s_list
 {
@@ -75,6 +76,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_color_fd(char *color, char *s, int fd);
+int		ft_printf(const char *format, ...);
 
 //list functions
 t_list	*ft_lstnew(void *content);
