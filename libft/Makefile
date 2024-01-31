@@ -7,9 +7,17 @@ NAME		= libft.a
 CFLAGS		= -Wall -Werror -Wextra
 CC		= cc
 RM		= rm -rf
+MKDIR		= mkdir -p
 
-SOURCES		= *.c
-OBJ_FILES	= $(SOURCES:.c=.o)
+SOURCES_DIR	= src
+SOURCES		= $(wildcard $(SOURCES_DIR)/*.c)
+OBJ		= $(addprefix $(OBJ_DIR)/, $(notdir $(SOURCES:.c=.o)))
+OBJ_DIR		= obj
+
+INCLUDES	= includes/*.h
+
+
+
 
 #########################################
 ###		RULES		      ###
@@ -17,12 +25,18 @@ OBJ_FILES	= $(SOURCES:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(SOURCES) libft.h ft_printf.h
-	@$(CC) $(CFLAGS) -c $(SOURCES)
-	@ar rcs $(NAME) $(OBJ_FILES)
+$(NAME): $(OBJ)
+	@ar rcs $(NAME) $(OBJ)
+
+$(OBJ_DIR)/%.o: $(SOURCES_DIR)/%.c
+	@$(MKDIR) $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -c $< -o $@
+	
+
+
 
 clean:
-	@$(RM) $(OBJ_FILES)
+	@$(RM) $(OBJ_DIR)
 
 fclean: clean
 	@$(RM) $(NAME)
