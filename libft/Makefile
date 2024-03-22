@@ -53,15 +53,13 @@ $(OBJ_DIR)/%.o: $(SOURCES_DIR)/%.c
 	@$(MKDIR) $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 	@$(eval COMPILE_COUNT=$(shell echo $$(($(COMPILE_COUNT)+1))))
-	@echo -n "$(RESET)$(YELLOW)Compiling libft $$(($(COMPILE_COUNT)*100/$(TOTAL_FILES)))% "
-	@printf '.%.0s' $$(seq 1 $$(($(COMPILE_COUNT)*40/$(TOTAL_FILES))))	
+	@echo -n "$(RESET)$(YELLOW)Compiling libft $$(($(COMPILE_COUNT)*100/$(TOTAL_FILES)))%"
 
 $(OBJ_DIR)/%.o: $(PRINTF_SRC_DIR)/%.c
 	@$(MKDIR) $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 	@$(eval COMPILE_COUNT=$(shell echo $$(($(COMPILE_COUNT)+1))))
-	@echo -n "$(RESET)$(YELLOW)Compiling libft $$(($(COMPILE_COUNT)*100/$(TOTAL_FILES)))% "
-	@printf '.%.0s' $$(seq 1 $$(($(COMPILE_COUNT)*40/$(TOTAL_FILES))))		
+	@echo -n "$(RESET)$(YELLOW)Compiling libft $$(($(COMPILE_COUNT)*100/$(TOTAL_FILES)))%"
 
 clean:
 	@$(RM) $(OBJ_DIR)
