@@ -21,6 +21,9 @@ PRINTF_SRC_DIR	= printf
 PRINTF_SRC	= $(wildcard $(PRINTF_SRC_DIR)/*.c)
 PRINTF_OBJ	= $(addprefix $(OBJ_DIR)/, $(notdir $(PRINTF_SRC:.c=.o))) 
 
+TOTAL_FILES := $(words $(wildcard $(SOURCES_DIR)/*.c) $(wildcard $(PRINTF_SRC_DIR)/*.c))
+
+COMPILE_COUNT = 0
 
 #########################################
 ###		COLORS		      ###
@@ -34,6 +37,7 @@ MAGENTA		= \033[0;35m
 CYAN		= \033[0;36m
 RESET		= \033[0m
 MOVEUP		= \033[F
+RESET		= \e[2K\r
 
 #########################################
 ###		RULES		      ###
@@ -43,17 +47,21 @@ all: $(NAME)
 
 $(NAME): $(OBJ) $(PRINTF_OBJ)
 	@ar rcs $(NAME) $(OBJ) $(PRINTF_OBJ)
-	@echo "$(GREEN)Libft has been created!"
+	@echo "$(RESET)$(GREEN)Libft has been created!"
 
 $(OBJ_DIR)/%.o: $(SOURCES_DIR)/%.c
 	@$(MKDIR) $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
-	@echo "$(YELLOW)Compiled $<"
-	
+	@$(eval COMPILE_COUNT=$(shell echo $$(($(COMPILE_COUNT)+1))))
+	@echo -n "$(RESET)$(YELLOW)Compiling libft $$(($(COMPILE_COUNT)*100/$(TOTAL_FILES)))% "
+	@printf '.%.0s' $$(seq 1 $$(($(COMPILE_COUNT)*40/$(TOTAL_FILES))))	
+
 $(OBJ_DIR)/%.o: $(PRINTF_SRC_DIR)/%.c
 	@$(MKDIR) $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
-	@echo "$(YELLOW)Compiled $<"
+	@$(eval COMPILE_COUNT=$(shell echo $$(($(COMPILE_COUNT)+1))))
+	@echo -n "$(RESET)$(YELLOW)Compiling libft $$(($(COMPILE_COUNT)*100/$(TOTAL_FILES)))% "
+	@printf '.%.0s' $$(seq 1 $$(($(COMPILE_COUNT)*40/$(TOTAL_FILES))))		
 
 clean:
 	@$(RM) $(OBJ_DIR)
