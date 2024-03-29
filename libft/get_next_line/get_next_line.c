@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 17:16:30 by pclaus            #+#    #+#             */
-/*   Updated: 2024/03/28 22:08:25 by pclaus           ###   ########.fr       */
+/*   Updated: 2024/03/29 15:50:45 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static char	*fill_stash(int fd, char *stash)
 	char	*buffer;
 
 	bytes_read = 1;
-	while (!gnl_ft_strchr(stash, '\n') && bytes_read != 0)
+	while (!ft_strchr(stash, '\n') && bytes_read != 0)
 	{
 		buffer = ft_calloc((BUFFER_SIZE + 1), sizeof(char));
 		if (!buffer)
@@ -51,7 +51,7 @@ static char	*fill_stash(int fd, char *stash)
 			free(stash);
 			return (NULL);
 		}
-		stash = gnl_ft_strjoin(stash, buffer);
+		stash = ft_strjoin(stash, buffer);
 		free(buffer);
 	}
 	return (stash);

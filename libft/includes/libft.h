@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 19:49:52 by pclaus            #+#    #+#             */
-/*   Updated: 2024/03/28 22:05:55 by pclaus           ###   ########.fr       */
+/*   Updated: 2024/03/29 15:49:30 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memset(void *b, int c, size_t len);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
-char				*ft_strchr(const char *str, int c);
+char				*ft_strchr(char *str, int c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t				ft_strlen(const char *s);
 char				*ft_strrchr(const char *s, int c);
@@ -69,8 +69,8 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putchar(char c);
 void				ft_putstr_fd(char *s, int fd);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
-char				*ft_strjoin(char const *s1, char const *s2);
-char				*ft_strtrim(char const *s1, char const *set);
+char				*ft_strjoin(char *dst, char *src);
+char				*ft_strtrim(char const *s1, char *set);
 char				**ft_split(char *str, char separator);
 char				*ft_itoa(int n);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
