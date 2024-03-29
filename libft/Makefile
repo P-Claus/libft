@@ -49,7 +49,7 @@ RESET			= \e[2K\r
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(PRINTF_OBJ) $(GNL_OBJ)
+$(NAME): $(OBJ) $(PRINTF_OBJ) $(GNL_OBJ) $(INCLUDES)
 	@ar rcs $(NAME) $(OBJ) $(PRINTF_OBJ) $(GNL_OBJ)
 	@echo "$(RESET)$(GREEN)Libft has been created!"
 
